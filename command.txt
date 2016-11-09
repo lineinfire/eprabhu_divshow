@@ -1,0 +1,14 @@
+git init
+git add .
+git commit -m "Message"
+
+// Optional
+git config --global user.email "abc@xyz.com"
+git commit -m "Message"
+
+
+git remote add origin URL_of_repository
+
+git remote -v
+
+git push origin master
