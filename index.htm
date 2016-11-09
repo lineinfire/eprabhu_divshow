@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html><head>
+	<meta http-equiv="content-type" content="text/html">
+	<meta name="author" content="TomaHawk / EDGE">
+
+	<title>Show Hide Div layers</title>
+</head>
+
+<body>
+<input type="radio" name="mobilePlan" value="prepaidForm" class="mobilePlan" checked="">Prepaid
+
+<input type="radio" name="mobilePlan" value="postpaidForm" class="mobilePlan">Postpaid
+
+<div id="prepaidForm" class="mobilePlan">This is prepaid div</div>
+<div id="postpaidForm" class="mobilePlan" style="display: none;">This is postpaid div</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function() {
+        //$("div.mobilePlan").hide();
+        $("input[name$='mobilePlan']").click(function() {
+            var test = $(this).val();
+            console.log(test);
+            $("div.mobilePlan").hide();
+            $("#" + test).show();
+        });
+    });
+</script>
+
+</body></html>
